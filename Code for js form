@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .formheader{
+                width: 100%;
+                height:fit-content;
+                background-image: url(https://www.powertecsolutions.net/wp-content/uploads/2019/05/form-background.png);
+                text-align:center;
+                opacity:0.9;
+                
+            }
+            body{
+                background-image: url(https://cdn.pixabay.com/photo/2016/11/01/18/38/background-1789175_960_720.png);
+                height: fit-content;
+                background-size: cover;
+            }
+            .form-container{
+                background-image:url(https://images.freecreatives.com/wp-content/uploads/2016/04/Best-Website-New-Wallpaper.jpg) ;
+                width:100%;
+                background-size: cover;
+                text-align: center;
+                height: fit-content;
+                opacity:0.95;
+            }
+            .empty{
+                width:100%;
+                height:25px;
+            }
+            .formfooter{
+                width: 100%;
+                height:fit-content;
+                background-image: url(https://static.vecteezy.com/system/resources/previews/000/550/114/original/vector-abstract-geometric-form-pattern-chaotic-flow-figure-background.jpg);
+                text-align:center;
+                opacity:0.9;
+            }
+        </style>
+        <script>
+         function onchangecity() {
+         var flag=document.getElementById("state").value;
+         if(flag=="Rj"){
+            var str="<option>Jodhpur</option>";
+            str+="<option>Jaipur</option>";
+            str+="<option>Ajmer</option>";
+            str+="<option>Udaipur</option>";
+            str+="<option>Sikar</option>";
+         }
+         else if(flag=="Mh"){
+            var str="<option>Pune</option>";
+            str+="<option>Mumbai</option>";
+            str+="<option>Nashik</option>";
+            str+="<option>Nagpur</option>";
+            str+="<option>Aurangabad</option>";
+         }
+         else if(flag=="Up"){
+            var str="<option>Agra</option>";
+            str+="<option>Allahabad</option>";
+            str+="<option>Amethi</option>";
+            str+="<option>Lucknow</option>";
+            str+="<option>Kanpur</option>";
+         }
+         else if(flag=="Mp"){
+            var str="<option>Indore</option>";
+            str+="<option>Bhopal</option>";
+            str+="<option>Jabalpur</option>";
+            str+="<option>Sagar</option>";
+            str+="<option>Chhindwara</option>";
+         }
+         else if(flag=="Hr"){
+            var str="<option>Gurgaon</option>";
+            str+="<option>Panchkula</option>";
+            str+="<option>Ambala</option>";
+            str+="<option>Faridabad</option>";
+            str+="<option>Hisar</option>";
+         }
+         else{
+            var str="<option>Select State First</option>";  
+         }
+         document.getElementById("city").innerHTML=str;
+         }
+
+
+         function finalsubmit(){
+            var firstname=document.getElementById("firstname");
+            var firstnamel=document.getElementById("firstnamel");
+
+            if(firstname.value==""){
+                firstnamel.style.display="block";
+            }
+            else{
+                firstamel.style.display="none";
+            }
+            var lastname=document.getElementById("lastname");
+            var lastnamel=document.getElementById("lastnamel");
+
+            if(lastname.value==""){
+                lastnamel.style.display="block";
+            }
+            else{
+                lastnamel.style.display="none";
+            }
+
+
+            var pincode=document.getElementById("pincode");
+            var pincodel=document.getElementById("pincodel");
+            var pincodell=document.getElementById("pincodell")
+
+            if(pincode.value==""){
+                pincodel.style.display="block";
+            }
+            else if(pincode.value.length !=6){
+                pincodell.style.display="block";
+            }
+            else{
+                pincodel.style.display="none";
+            }
+
+            var state=document.getElementById("state");
+            var statel=document.getElementById("statel");
+
+            if(state.value==""){
+                statel.style.display="block";
+            }
+            else{
+                statel.style.display="none";
+            }
+
+            var city=document.getElementById("city");
+            var cityl=document.getElementById("cityl");
+
+            if(city.value==""){
+                cityl.style.display="block";
+            }
+            else{
+                cityl.style.display="none";
+            }
+
+            var phoneno=document.getElementById("phoneno");
+            var phonenol=document.getElementById("phonenol");
+            var phonenoll=document.getElementById("phonenoll");
+            if(phoneno.value==""){
+                phonenol.style.display="block";
+            }
+            else if(phoneno.value.length !=10){
+                phonenoll.style.display="block";
+            }
+            else{
+                phonenol.style.display="none";
+            }
+
+
+            var emailid=document.getElementById("emailid");
+            var emailidl=document.getElementById("emailidl");
+
+            if(emailid.value==""){
+                emailidl.style.display="block";
+            }
+            else{
+                emailidl.style.display="none";
+            }
+
+            var pancardno=document.getElementById("pancardno");
+            var pancardnol=document.getElementById("pancardnol");
+            var pancardnoll=document.getElementById("pancardnoll");
+
+            if(pancardno.value==""){
+                pancardnol.style.display="block";
+            }
+            else if(pancardno.value.length !=10){
+                pancardnoll.style.display="block";
+            }
+            else{
+                pancardnol.style.display="none";
+            }
+
+
+            var description=document.getElementById("description");
+            var descriptionl=document.getElementById("descriptionl");
+
+            if(description.value==""){
+                descriptionl.style.display="block";
+            }
+            else{
+                descriptionl.style.display="none";
+            }
+         }
+        </script>
+    </head>
+    <body>
+        <div class="formheader"><h1>Enroll Now
+            <br>To get access to learn <b>WEB DEVELOPMENT</b> with KULDEEP SINGH</h1>
+        </div>
+        <div class="form-container">
+            <br>
+        <input type="text" value="" placeholder="Enter First Name" id="firstname"/>
+        <label id="firstnamel" style="color:aqua ;display:none">First name is required</label>
+         <br><br>
+        <input type="text" value="" placeholder="Enter Last Name" id="lastname"/>
+        <label id="lastnamel" style="color:aqua ;display:none">Last name is required</label>
+        <br><br>
+        <input type="number" value="" placeholder="Enter Pincode" id="pincode"/>
+        <label id="pincodel" style="color:aqua ;display:none">Pincode is required</label>
+        <label id="pincodell" style="color:aqua ;display:none">Pincode should be of six digit</label>
+        <br><br>
+        <Select id="state" onchange="onchangecity()">
+            <option value="">Select Your State</option>
+            <option value="Rj">Rajasthan</option>
+            <option value="Mh">Maharashtra</option>
+            <option value="Up">Uttar Pradesh</option>
+            <option value="Mp">Madhya Pradesh</option>
+            <option value="Hr">Haryana</option>
+        </Select>
+        <label id="statel" style="color:aqua ;display:none">State is required</label>
+        <br><br><br>
+        <Select id="city">
+        </Select>
+        <label id="cityl" style="color:aqua ;display:none">City is required</label>
+        <br><br><br>
+        <input type="tel" value="" placeholder="ENTER PHONE No" id="phoneno"/>
+        <label id="phonenol" style="color:aqua ;display:none">Mobile number is required</label>
+        <label id="phonenoll" style="color:aqua ;display:none">Mobile number should be of 10 digits</label>
+        <br><br><br>
+        <input type="email" value="" placeholder="ENTER EMAILID" id="emailid"/>
+        <label id="emailidl" style="color:aqua ;display:none">Email id is required</label>
+        <br><br><br>
+        <input type="number" value="" placeholder="ENTER PANCARD No" id="pancardno"/>
+        <label id="pancardnol" style="color:aqua ;display:none">Pancard is required</label>
+        <label id="pancardnoll" style="color:aqua ;display:none">Pancard number should be of 10 alphanumeric digits</label>
+        <br><br><br>
+        <textarea type="text" rows="3" value="" placeholder="TYPE SOMETHING HERE..." id="description"></textarea>
+        <label id="descriptionl" style="color:aqua ;display:none">Description is required</label>
+        <br><br><br>
+        <button onclick="finalsubmit()">Submit</button>
+        <br><br>
+    </div>
+    <div class="empty"></div>
+    <div class="formfooter">If you find any difficulty in filling form 
+        <br>You can reach out to us:
+        <br>Contact:+91902215XXXX;
+        <br>Email:KuldeepsinghXXXX@gmail.com
+    </div>
+    </body>
+</html>
